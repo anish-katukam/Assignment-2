@@ -1,4 +1,4 @@
-package cse360assign3;
+package cse360assign2;
 
 /**
  * Anish Katukam, 434, Assignment #2
@@ -27,7 +27,7 @@ public class Calculator {
      * @return the current value of "total"
      */
     public int getTotal() {
-        return 0;
+        return total;
     }
 
     /**
@@ -36,7 +36,7 @@ public class Calculator {
      * @param value the value to be added to "total"
      */
     public void add(int value) {
-
+        total = total + value;
     }
 
     /**
@@ -45,7 +45,7 @@ public class Calculator {
      * @param value the value to be subtracted from "total"
      */
     public void subtract(int value) {
-
+        total = total - value;
     }
 
     /**
@@ -54,7 +54,7 @@ public class Calculator {
      * @param value the value to multiply "total" by
      */
     public void multiply(int value) {
-
+        total = total * value;
     }
 
     /**
@@ -65,6 +65,11 @@ public class Calculator {
      * @param value the value to divide "total" by
      */
     public void divide(int value) {
+        if (value == 0) {
+            total = 0;
+        } else {
+            total = total / value;
+        }
 
     }
 
