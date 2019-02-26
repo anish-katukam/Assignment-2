@@ -12,6 +12,7 @@ package cse360assign2;
 public class Calculator {
 
     private int total;
+    private String operationLog;
 
     /**
      * Class constructor. int Total is initialized to the default value of 0
@@ -19,6 +20,7 @@ public class Calculator {
      */
     public Calculator() {
         total = 0;  // not needed - included for clarity
+        operationLog = "0";
     }
 
     /**
@@ -37,6 +39,7 @@ public class Calculator {
      */
     public void add(int value) {
         total = total + value;
+        operationLog = operationLog + " + " + value;
     }
 
     /**
@@ -46,6 +49,7 @@ public class Calculator {
      */
     public void subtract(int value) {
         total = total - value;
+        operationLog = operationLog + " - " + value;
     }
 
     /**
@@ -55,6 +59,7 @@ public class Calculator {
      */
     public void multiply(int value) {
         total = total * value;
+        operationLog = operationLog + " * " + value;
     }
 
     /**
@@ -70,7 +75,7 @@ public class Calculator {
         } else {
             total = total / value;
         }
-
+        operationLog = operationLog + " / " + value;
     }
 
     /**
@@ -80,6 +85,6 @@ public class Calculator {
      * @return a string encoding all operations done to "total"
      */
     public String getHistory() {
-        return "";
+        return operationLog;
     }
 }
